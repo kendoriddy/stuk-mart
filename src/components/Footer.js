@@ -8,7 +8,7 @@ const Footer = () => (
     <Container className=" footer d-flex align-items-center justify-content-between text-white position-relative b-0 mt-4">
       <div className="text-center">
         <h5>Stock Market trends</h5>
-        <span>RideOnOne 2022</span>
+        <span>All rights reserved 2022</span>
       </div>
       <div>
         <ul className="d-flex">
@@ -24,7 +24,7 @@ const Footer = () => (
           </li>
           <li className="mx-2">
             <a
-              href="https://linkedin.com/in/kehinde-onifade/"
+              href="https://linkedin.com/in/oyinlade-ojesanmi/"
               target="_blank"
               rel="noreferrer"
               className="text-white"
@@ -34,7 +34,7 @@ const Footer = () => (
           </li>
           <li className="mx-2">
             <a
-              href="https://twitter.com/rideonone09"
+              href="https://twitter.com/ojesanmi_oyin"
               target="_blank"
               rel="noreferrer"
               className="text-white"

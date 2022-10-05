@@ -5,9 +5,9 @@ import { Container, Card } from 'react-bootstrap';
 import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { fetchStockData } from '../redux/Stock';
-import '../css/stock.css';
 import chart from '../assets/chart.png';
 import Search from './Search';
+import '../css/stock.css';
 
 const Stock = () => {
   const stockState = useSelector((state) => state.stockDataReducer.stockData);
