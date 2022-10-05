@@ -1,11 +1,11 @@
 // Action Types
-const GET_STOCK_DATA = "stocks-market-trends/stocks/GET_STOCK_DATA";
-const GET_COMPANY_DETAILS = "stocks-market-trends/stocks/GET_COMPANY_DETAILS";
-const GET_COMPANY_STATEMENTS = "stocks-market-trends/stocks/GET_COMPANY_STATEMENTS";
-const FILTER_COMPANY = "stocks-market-trends/stocks/FILTER_COMPANY";
-const RESET_STOCK = "stocks-market-trends/stocks/RESET_STOCK";
-const API_URL = "https://financialmodelingprep.com/api/v3/";
-const API_KEY = "82a4de9376f4c4d59d47b606435ee1e1";
+const GET_STOCK_DATA = 'stocks-market-trends/stocks/GET_STOCK_DATA';
+const GET_COMPANY_DETAILS = 'stocks-market-trends/stocks/GET_COMPANY_DETAILS';
+const GET_COMPANY_STATEMENTS = 'stocks-market-trends/stocks/GET_COMPANY_STATEMENTS';
+const FILTER_COMPANY = 'stocks-market-trends/stocks/FILTER_COMPANY';
+const RESET_STOCK = 'stocks-market-trends/stocks/RESET_STOCK';
+const API_URL = 'https://financialmodelingprep.com/api/v3/';
+const API_KEY = '82a4de9376f4c4d59d47b606435ee1e1';
 
 // Stock actions
 const initialState = {
@@ -52,7 +52,7 @@ export const fetchCompanyDetails = (companyId) => async (dispatch) => {
 export const fetchCompanyStatements = (companyId) => async (dispatch) => {
   try {
     const response = await fetch(
-      `${API_URL}income-statement/${companyId}?limit=120&apikey=${API_KEY}`
+      `${API_URL}income-statement/${companyId}?limit=120&apikey=${API_KEY}`,
     );
     const result = await response.json();
     dispatch(getCompanyStatement(result));
@@ -65,7 +65,9 @@ export const fetchStockData = () => async (dispatch) => {
   try {
     const response = await fetch(`${API_URL}stock_market/actives?limit=20&apikey=${API_KEY}`);
     const result = await response.json();
-    const data = result.map(({ symbol, name, change, price, changesPercentage }) => ({
+    const data = result.map(({
+      symbol, name, change, price, changesPercentage,
+    }) => ({
       id: symbol,
       change,
       companyName: name,
@@ -94,17 +96,16 @@ const stockDataReducer = (state = initialState, { type, payload }) => {
 
     case RESET_STOCK:
       return { ...state, statement: [], details: [] };
-      
+
     case FILTER_COMPANY:
-      if (payload === "") {
+      if (payload === '') {
         return { ...state, filtered: [...state.stocksData] };
       }
       return {
         ...state,
         filtered: [
-          ...state.stocksData.filter(({ companyName }) =>
-            companyName.toLowerCase().includes(payload.toLowerCase())
-          ),
+          ...state.stocksData.filter(({ companyName }) => companyName
+            .toLowerCase().includes(payload.toLowerCase())),
         ],
       };
 
