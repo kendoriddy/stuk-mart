@@ -5,7 +5,7 @@ import { Container, Card } from 'react-bootstrap';
 import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { fetchStockData } from '../redux/Stock';
-import chart from '../assets/chart.png';
+import chart from '../assets/fining.jpeg';
 import '../css/stock.css';
 
 const Stock = () => {
@@ -33,7 +33,7 @@ const Stock = () => {
                 <Card className="text-white alternate" key={id}>
                   <Link to={`/details/${id}`} key={`${id}link`} className="link-cover">
                     <Card.Img src={chart} alt="Card image" />
-                    <Card.ImgOverlay className="card-all">
+                    <Card.ImgOverlay className="card-all text-white">
                       <Card.Title>{companyName}</Card.Title>
                       <Card.Text>
                         <span className=" bg-dark text-white p-2 text-center">
