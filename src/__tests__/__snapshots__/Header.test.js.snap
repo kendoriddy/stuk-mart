@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<header>
+  <div
+    className="navbar"
+  >
+    <h3>
+      Stuk-Mart
+    </h3>
+  </div>
+  <div
+    className="search-name"
+  >
+    <input
+      className="px-2"
+      id="search"
+      onChange={[Function]}
+      placeholder="Search company by name..."
+      type="search"
+      value=""
+    />
+  </div>
+</header>
+`;

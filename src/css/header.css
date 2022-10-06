@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  background-color: var(--color-primary-light);
+  padding: 0 1rem 0.5rem;
+}
+
+.icons-container {
+  display: flex;
+}
+
+.search-name {
+  width: 40vw;
+}
