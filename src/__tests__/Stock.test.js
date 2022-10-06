@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import store from '../Redux/ConfigureStore';
 import Stock from '../components/Stock';
+import store from '../redux/configureStore';
 
 const CompanyProvider = () => (
   <Provider store={store}>

@@ -1,7 +1,7 @@
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import Home from '../pages/Home';
-import store from '../Redux/ConfigureStore';
+import store from '../redux/configureStore';
 
 const HomePage = () => (
   <Provider store={store}>
