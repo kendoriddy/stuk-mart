@@ -10,7 +10,7 @@ const Footer = () => (
     <ul className="d-flex">
       <li className="mx-2">
         <a
-          href="https://github.com/Lizdev-05/"
+          href="https://github.com/kendoriddy/"
           target="_blank"
           rel="noreferrer"
           className="text-white"
@@ -20,7 +20,7 @@ const Footer = () => (
       </li>
       <li className="mx-2">
         <a
-          href="https://linkedin.com/in/oyinlade-ojesanmi/"
+          href="https://www.linkedin.com/in/kehindeonifade/"
           target="_blank"
           rel="noreferrer"
           className="text-white"
@@ -30,7 +30,7 @@ const Footer = () => (
       </li>
       <li className="mx-2">
         <a
-          href="https://twitter.com/ojesanmi_oyin"
+          href="https://twitter.com/rideonone09"
           target="_blank"
           rel="noreferrer"
           className="text-white"
