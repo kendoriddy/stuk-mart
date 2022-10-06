@@ -20,7 +20,7 @@ const Details = () => {
   useEffect(() => {
     dispatch(fetchCompanyDetails(companyId));
     dispatch(fetchCompanyStatements(companyId));
-  }, [companyId]);
+  }, [companyId, dispatch]);
 
   const clickHandler = () => {
     dispatch(resetStock());

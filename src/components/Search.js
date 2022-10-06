@@ -7,7 +7,7 @@ const Search = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(filterCompany(''));
-  }, []);
+  }, [dispatch]);
   const [search, setSearch] = useState('');
   const handleChange = (e) => {
     setSearch(e.target.value);
