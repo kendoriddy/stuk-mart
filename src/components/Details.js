@@ -116,7 +116,7 @@ const Details = () => {
         <Container>
           <h2 className="text-center">Financial statements report</h2>
           <Container>
-            <Table striped bordered hover variant="dark" responsive>
+            <Table striped bordered hover variant="light" responsive>
               <thead>
                 <tr>
                   <th>Reported Year</th>
