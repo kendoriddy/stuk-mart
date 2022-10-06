@@ -14,16 +14,16 @@ const Search = () => {
     dispatch(filterCompany(e.target.value));
   };
   return (
-    <>
+    <div className="search-name">
       <input
         id="search"
         className="px-2"
-        placeholder="Search company name..."
+        placeholder="Search company by name..."
         value={search}
         type="search"
         onChange={handleChange}
       />
-    </>
+    </div>
   );
 };
 

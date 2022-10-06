@@ -6,7 +6,6 @@ import { FaLongArrowAltDown, FaLongArrowAltUp } from 'react-icons/fa';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { fetchStockData } from '../redux/Stock';
 import chart from '../assets/chart.png';
-import Search from './Search';
 import '../css/stock.css';
 
 const Stock = () => {
@@ -23,8 +22,7 @@ const Stock = () => {
     return <d1>Loading...</d1>;
   }
   return (
-    <>
-      <Search />
+    <div className="overall">
       <Container className="p-0">
         <section className="display">
           {filteredState.length === 0
@@ -32,10 +30,10 @@ const Stock = () => {
               ({
                 id, change, companyName, price, changesPercentage,
               }) => (
-                <Card className="text-white alternate card" key={id}>
-                  <Link to={`/details/${id}`} key={`${id}link`} className="text-white">
+                <Card className="text-white alternate" key={id}>
+                  <Link to={`/details/${id}`} key={`${id}link`} className="link-cover">
                     <Card.Img src={chart} alt="Card image" />
-                    <Card.ImgOverlay className="text-center align-center d-flex flex-column  justify-content-center">
+                    <Card.ImgOverlay className="card-all">
                       <Card.Title>{companyName}</Card.Title>
                       <Card.Text>
                         <span className=" bg-dark text-white p-2 text-center">
@@ -110,7 +108,7 @@ const Stock = () => {
             )}
         </section>
       </Container>
-    </>
+    </div>
   );
 };
 
