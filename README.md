@@ -7,7 +7,7 @@
 ![Stocks app](./src/assets/sc3.png)
 
 - [Live Demo Coming soon](coming soon)
-- [Presentation Video Coming soon](coming soon)
+- [Presentation Video](https://www.loom.com/share/49b5ab910e004b4db795497e8c27528b)
 
 > Stuk-Mart is a web(mobile-focused) app for checking the companies listed on the stock exchange and see their live metrics. Its data is consumed from the [Financial modelling API](https://site.financialmodelingprep.com/developer/docs/). It is built using React, Redux, and React-bootstrap, Skeleton Loader, Recharts.
 
