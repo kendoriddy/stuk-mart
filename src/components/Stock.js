@@ -16,7 +16,7 @@ const Stock = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchStockData());
-  }, []);
+  }, [dispatch]);
 
   if (stockState.length === 0) {
     return <d1>Loading...</d1>;
